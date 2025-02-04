@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
   //? oprettelse af elementer til Hero (hero er ikke et array, og derfor bruges forEach ikke):
   // div til hero indhold:
   const heroDiv = document.createElement("div");
-  heroDiv.classList.add(".hero");
   // Billede:
   const heroImg = document.createElement("img");
   heroImg.src = heroDiv.image;
@@ -31,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
   services.forEach((service) => {
     // div til services indhold:
     const servicesDiv = document.createElement("div");
-    servicesDiv.classList.add("service");
 
     // illustration:
     const servicesIllustrations = document.createElement("img");
@@ -66,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
   //? oprettelse af elementer til facilities (overordnet det samme som for hero):
   // div til facilities indhold:
   const facilitiesDiv = document.createElement("div");
-  facilitiesDiv.classList.add("facilities");
   // Overskrift:
   const facilitiesHeadline = document.createElement("h2");
   facilitiesHeadline.textContent = facilities.headline;
@@ -93,21 +90,48 @@ document.addEventListener("DOMContentLoaded", function () {
     // Tilføj elementer til optionDiv
     optionDiv.append(iconImg, optionHeadline, optionText);
 
-    // Tilføj optionDiv til optionsContainer
+    // Tilføj optionDiv til facilitiesOptions:
     facilitiesOptions.appendChild(optionDiv);
   });
 
   //? Tilføjelse af elementer til HTML:
   facilitiesDiv.append(facilitiesHeadline, facilitiesOptions);
-  // hero div tilføjes til heroElm (stedet der er lavet til hero i HTML)
+  // facilities div tilføjes til facilitiesElm:
   facilitiesElm.appendChild(facilitiesDiv);
 
-  
   //! SITES
   let sitesElm = document.querySelector(".sites");
 
+
   //! ADVANTAGES
+  //? Advantages er et array, og derfor bruges forEach:
   let advantagesElm = document.querySelector(".advantages");
+
+  advantages.forEach((advantage) => {
+    // div til services indhold:
+    const advantagesDiv = document.createElement("div");
+
+    // ikon:
+    const advantagesIcon = document.createElement("img");
+    advantagesIcon.src = advantage.icon;
+
+    // headline:
+    const advantagesHeadline = document.createElement("h2");
+    advantagesHeadline.textContent = advantage.headline;
+
+    // tekst:
+    const advantagesText = document.createElement("p");
+    advantagesText.textContent = advantage.text;
+
+    //? Tilføjelse af elementer til HTML:
+    advantagesDiv.append(
+      advantagesIcon,
+      advantagesHeadline,
+      advantagesText
+    );
+    // advantages div tilføjes til advantagesElm:
+    advantagesElm.appendChild(advantagesDiv);
+  });
 
   // eksempel på at udskrive alle overskrifter i services i konsollen:
   // services.forEach(service => console.log(service.headline))

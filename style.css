@@ -71,8 +71,19 @@
 
 /* ------------- ADVANTAGES ------------- */
 .advantages{
-    background-color: purple;
-    
+    background-color: purple;    
+}
+.advantages div{
+    background-color: rgb(26, 8, 26);    
+}
+.advantages img{
+    background-color: rgb(114, 56, 114);    
+}
+.advantages h2{
+    background-color: rgb(236, 178, 236);    
+}
+.advantages p{
+    background-color: rgb(255, 0, 255);    
 }
 
 
