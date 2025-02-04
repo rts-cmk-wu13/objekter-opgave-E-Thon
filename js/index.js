@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   services.forEach((service) => {
     // div til services indhold:
     const servicesDiv = document.createElement("div");
-    servicesDiv.classList.add(".service");
+    servicesDiv.classList.add("service");
 
     // illustration:
     const servicesIllustrations = document.createElement("img");
@@ -50,7 +50,12 @@ document.addEventListener("DOMContentLoaded", function () {
     servicesLinktext.textContent = service.linktext;
 
     //? Tilføjelse af elementer til HTML:
-    servicesDiv.append(servicesIllustrations, servicesHeadline, servicesText, servicesLinktext);
+    servicesDiv.append(
+      servicesIllustrations,
+      servicesHeadline,
+      servicesText,
+      servicesLinktext
+    );
     // services div tilføjes til servicesElm:
     servicesElm.appendChild(servicesDiv);
   });
@@ -58,6 +63,46 @@ document.addEventListener("DOMContentLoaded", function () {
   //! FACILITIES
   let facilitiesElm = document.querySelector(".facilities");
 
+  //? oprettelse af elementer til facilities (overordnet det samme som for hero):
+  // div til facilities indhold:
+  const facilitiesDiv = document.createElement("div");
+  facilitiesDiv.classList.add("facilities");
+  // Overskrift:
+  const facilitiesHeadline = document.createElement("h2");
+  facilitiesHeadline.textContent = facilities.headline;
+  // Options div:
+  const facilitiesOptions = document.createElement("div");
+  facilitiesOptions.classList.add("facilities__options");
+
+  // forEach til hver option:
+  facilities.options.forEach((option) => {
+    const optionDiv = document.createElement("div");
+
+    // Ikon
+    const iconImg = document.createElement("img");
+    iconImg.src = option.icon;
+
+    // Overskrift
+    const optionHeadline = document.createElement("h2");
+    optionHeadline.textContent = option.headline;
+
+    // Tekst
+    const optionText = document.createElement("p");
+    optionText.textContent = option.text;
+
+    // Tilføj elementer til optionDiv
+    optionDiv.append(iconImg, optionHeadline, optionText);
+
+    // Tilføj optionDiv til optionsContainer
+    facilitiesOptions.appendChild(optionDiv);
+  });
+
+  //? Tilføjelse af elementer til HTML:
+  facilitiesDiv.append(facilitiesHeadline, facilitiesOptions);
+  // hero div tilføjes til heroElm (stedet der er lavet til hero i HTML)
+  facilitiesElm.appendChild(facilitiesDiv);
+
+  
   //! SITES
   let sitesElm = document.querySelector(".sites");
 
