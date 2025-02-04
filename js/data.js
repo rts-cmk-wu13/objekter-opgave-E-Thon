@@ -101,9 +101,9 @@ let advantages = [
 ];
 
 // Opret dit dataobjekt til footerens indhold herunder
-let footer = {
-  top: [
-    {
+let footer = [
+  {
+    top: {
       text: "Easy Camper",
       headline: "When Passion Meets Comfort.",
       links: [
@@ -121,11 +121,11 @@ let footer = {
         },
       ],
     },
-  ],
-  bottom: [
-    {
+  },
+  {
+    bottom: {
       copyright: "EazyCamper. All rights reserved.",
       links: ["About", "Site Map", "Terms", "Privacy Policy", "Teams"],
     },
-  ],
-};
+  },
+];
