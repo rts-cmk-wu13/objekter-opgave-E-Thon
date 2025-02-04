@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //! HERO 
     let heroElm = document.querySelector(".hero");
 
-    //? oprettelse af elementer til Hero:
+    //? oprettelse af elementer til Hero (hero er ikke et array, og derfor bruges forEach ikke):
     // div til hero indhold:
     const heroDiv = document.createElement("div");
     heroDiv.classList.add(".hero");
@@ -28,8 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // hero div tilføjes til heroElm (stedet der er lavet til hero i HTML)
     heroElm.appendChild(heroDiv);
     
-    
+
     //! SERVICES
+    //? services er et array, og derfor bruges forEach:
     
     
     //! FACILITIES

@@ -1,21 +1,38 @@
 /* ------------- HERO ------------------- */ 
 .hero {
-    background-color: aqua;
+    background-color: rgb(87, 197, 197);
 }
 
 /* ------------- SERVICES --------------- */
-
+.services{
+    background-color: pink;
+}
 
 /* ------------- FACILITIES  ------------ */
+.facilities{
+    background-color: brown;
+}
 
 
 
 /* ------------- SITES ------------------ */
+.sites{
+    background-color: red;
+    
+}
 
 
 
 /* ------------- ADVANTAGES ------------- */
+.advantages{
+    background-color: purple;
+    
+}
 
 
 
 /* ------------- FOOTER ----------------- */
+.footer{
+    background-color: blue;
+
+}
