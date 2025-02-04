@@ -26,7 +26,7 @@
 .services img{
     background-color: rgb(207, 49, 75);
 }
-.services h2{
+.services h3{
     background-color: rgb(78, 39, 46);
 }
 .services p{
@@ -52,7 +52,7 @@
 .facilities__options img {
     background-color: rgb(212, 231, 217);
 }
-.facilities__options h2 {
+.facilities__options h4 {
     background-color: rgb(29, 61, 37);
 }
 .facilities__options p {
@@ -64,13 +64,39 @@
 /* ------------- SITES ------------------ */
 .sites{
     background-color: red;
-    
+}
+.sites div{
+    background-color: red;
+}
+.sites h2{
+    background-color: red;
+}
+.sites p{
+    background-color: red;
+}
+.sites img{
+    background-color: red;
+}
+
+.sites__places {
+    background-color: firebrick;
+}
+.sites__places div{
+    background-color: firebrick;
+}
+.sites__places img{
+    background-color: firebrick;
+}
+.sites__places h3{
+    background-color: firebrick;
+}
+.sites__places p{
+    background-color: firebrick;
 }
 
 
-
 /* ------------- ADVANTAGES ------------- */
-.advantages{
+.advantages {
     background-color: purple;    
 }
 .advantages div{
@@ -79,7 +105,7 @@
 .advantages img{
     background-color: rgb(114, 56, 114);    
 }
-.advantages h2{
+.advantages h4{
     background-color: rgb(236, 178, 236);    
 }
 .advantages p{

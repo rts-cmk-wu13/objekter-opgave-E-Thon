@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     servicesIllustrations.src = service.illustration;
 
     // headline:
-    const servicesHeadline = document.createElement("h2");
+    const servicesHeadline = document.createElement("h3");
     servicesHeadline.textContent = service.headline;
 
     // tekst:
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
     iconImg.src = option.icon;
 
     // Overskrift
-    const optionHeadline = document.createElement("h2");
+    const optionHeadline = document.createElement("h4");
     optionHeadline.textContent = option.headline;
 
     // Tekst
@@ -101,7 +101,47 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //! SITES
   let sitesElm = document.querySelector(".sites");
+  //? Enkeltstående kodelinjer kombineret med arrays til oprettelse af elementer (samme koncept som ved facilites)
+  const sitesDiv = document.createElement("div");
 
+  // headline:
+  const sitesHeadline = document.createElement("h2");
+  sitesHeadline.textContent = sites.headline;
+  // text:
+  const sitesText = document.createElement("p");
+  sitesText.textContent = sites.text;
+  // btnicon:
+  const sitesBtnicon = document.createElement("img");
+  sitesBtnicon.src = sites.btnicon;
+  // places:
+  const sitesPlaces = document.createElement("div");
+  sitesPlaces.classList.add("sites__places");
+  // forEach til places array:
+  sites.places.forEach((place) => {
+    const placesDiv = document.createElement("div");
+
+    // img:
+    const placesImg = document.createElement("img");
+    placesImg.src = place.img;
+
+    // name:
+    const placesName = document.createElement("h3");
+    placesName.textContent = place.name;
+
+    // city:
+    const placesCity = document.createElement("p");
+    placesCity.textContent = place.city;
+
+    //? Tilføjelse af elementer til HTML:
+    placesDiv.append(placesImg, placesName, placesCity);
+    // places div tilføjes til sitesElm:
+    sitesPlaces.appendChild(placesDiv);
+  });
+
+  //? Tilføjelse af elementer til HTML:
+  sitesDiv.append(sitesHeadline, sitesText, sitesBtnicon, sitesPlaces);
+  // sites div tilføjes til sitesElm:
+  sitesElm.appendChild(sitesDiv);
 
   //! ADVANTAGES
   //? Advantages er et array, og derfor bruges forEach:
@@ -116,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
     advantagesIcon.src = advantage.icon;
 
     // headline:
-    const advantagesHeadline = document.createElement("h2");
+    const advantagesHeadline = document.createElement("h4");
     advantagesHeadline.textContent = advantage.headline;
 
     // tekst:
@@ -124,11 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
     advantagesText.textContent = advantage.text;
 
     //? Tilføjelse af elementer til HTML:
-    advantagesDiv.append(
-      advantagesIcon,
-      advantagesHeadline,
-      advantagesText
-    );
+    advantagesDiv.append(advantagesIcon, advantagesHeadline, advantagesText);
     // advantages div tilføjes til advantagesElm:
     advantagesElm.appendChild(advantagesDiv);
   });
