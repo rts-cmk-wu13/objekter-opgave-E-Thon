@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const heroDiv = document.createElement("div");
   // Billede:
   const heroImg = document.createElement("img");
-  heroImg.src = heroDiv.image;
+  heroImg.src = hero.image;
   // Overskrift:
   const heroHeadline = document.createElement("h1");
   heroHeadline.textContent = hero.headline;
@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Ikon:
   const heroIcon = document.createElement("img");
   heroIcon.src = hero.icon;
+  heroIcon.classList.add("icon");
 
   //? Tilføjelse af elementer til HTML:
   heroDiv.append(heroImg, heroHeadline, heroCopy, heroIcon);
@@ -76,8 +77,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const optionDiv = document.createElement("div");
 
     // Ikon
-    const iconImg = document.createElement("img");
-    iconImg.src = option.icon;
+    const optionIcon = document.createElement("img");
+    optionIcon.src = option.icon;
+    optionIcon.classList.add("icon");
+
 
     // Overskrift
     const optionHeadline = document.createElement("h4");
@@ -88,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
     optionText.textContent = option.text;
 
     // Tilføj elementer til optionDiv
-    optionDiv.append(iconImg, optionHeadline, optionText);
+    optionDiv.append(optionIcon, optionHeadline, optionText);
 
     // Tilføj optionDiv til facilitiesOptions:
     facilitiesOptions.appendChild(optionDiv);
@@ -113,6 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // btnicon:
   const sitesBtnicon = document.createElement("img");
   sitesBtnicon.src = sites.btnicon;
+  sitesBtnicon.classList.add("icon");
   // places:
   const sitesPlaces = document.createElement("div");
   sitesPlaces.classList.add("sites__places");
@@ -154,6 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // ikon:
     const advantagesIcon = document.createElement("img");
     advantagesIcon.src = advantage.icon;
+    advantagesIcon.classList.add("icon");
 
     // headline:
     const advantagesHeadline = document.createElement("h4");
