@@ -2,10 +2,38 @@
 .hero {
     background-color: rgb(87, 197, 197);
 }
+.hero div {
+    background-color: rgb(4, 131, 131);
+}
+
+.hero h1{
+    background-color: rgb(76, 126, 126);
+}
+.hero img{
+    background-color: rgb(8, 51, 51);
+}
+.hero p{
+    background-color: rgb(193, 236, 236);
+}
 
 /* ------------- SERVICES --------------- */
 .services{
     background-color: pink;
+}
+.services div{
+    background-color: rgb(177, 115, 125);
+}
+.services img{
+    background-color: rgb(207, 49, 75);
+}
+.services h2{
+    background-color: rgb(78, 39, 46);
+}
+.services p{
+    background-color: rgb(236, 77, 103);
+}
+.services a{
+    background-color: rgb(196, 88, 142);
 }
 
 /* ------------- FACILITIES  ------------ */
