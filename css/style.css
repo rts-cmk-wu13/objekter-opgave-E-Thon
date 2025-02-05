@@ -1,21 +1,23 @@
 /* COMMON STUFF: */
 .services,
 .facilities__options,
-.sites div {
+.sites__places {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto, 1fr);
-    grid-template-rows: repeat(auto, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(14.375rem, 1fr));
+    grid-template-rows: auto;
     column-gap: 2.56rem;
 }
-section:not(.hero):not(.hero__container) {
+
+section:not(.hero):not(.hero__container):not(.sites__description) {
     margin: 0 auto;
     max-width: 77.5rem;
     width: 100%;
 }
+
 .services div,
 .facilities div,
-.sites div {
+.sites__places div {
     grid-row: 1 / 2;
 }
 
@@ -101,42 +103,40 @@ section:not(.hero):not(.hero__container) {
 
 /* ------------- SITES ------------------ */
 .sites {
-    background-color: rgb(231, 217, 15);
     padding: 14.5rem 0;
 }
 
-.sites div {
-    background-color: rgb(184, 177, 85);
+.sites>div {
+    display: flex;
+    gap: 7.9375rem;
 }
 
-.sites h2 {
-    background-color: rgb(146, 125, 5);
-}
-
-.sites p {
-    background-color: rgb(245, 247, 164);
+.sites__description {
+    max-width: 20.3125rem;
 
 }
 
-.sites__places {
-    background-color: rgb(63, 3, 3);
-}
-
-.sites__places div {
-    background-color: rgb(178, 34, 34);
+.sites__description p {
+    font-size: 1.125rem;
 }
 
 .sites__places img {
-    background-color: rgb(243, 106, 106);
+    height: 26.125rem;
 }
 
 .sites__places h3 {
-    background-color: rgb(97, 69, 69);
+padding-top: 1.5rem;
 }
 
 .sites__places p {
-    background-color: rgb(250, 211, 211);
+color: #3F3D56;
+font-size: 0.875rem;
+}
 
+.sites__places a {
+    color:#F78065;
+    font-size: 1.125rem;
+    font-weight: normal;
 }
 
 

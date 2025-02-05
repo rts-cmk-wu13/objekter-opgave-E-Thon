@@ -129,6 +129,9 @@ document.addEventListener("DOMContentLoaded", function () {
   //? Enkeltstående kodelinjer kombineret med arrays til oprettelse af elementer (samme koncept som ved facilites)
   const sitesDiv = document.createElement("div");
 
+  //sitesDescription: 
+  const sitesDescription = document.createElement("section");
+  sitesDescription.classList.add("sites__description");
   // headline:
   const sitesHeadline = document.createElement("h2");
   sitesHeadline.textContent = sites.headline;
@@ -143,6 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const sitesBtnicon = document.createElement("img");
   sitesBtnicon.src = sites.btnicon;
   sitesBtnicon.classList.add("icon");
+
   // places:
   const sitesPlaces = document.createElement("div");
   sitesPlaces.classList.add("sites__places");
@@ -162,16 +166,25 @@ document.addEventListener("DOMContentLoaded", function () {
     const placesCity = document.createElement("p");
     placesCity.textContent = place.city;
 
+    // link:
+    const placesLink = document.createElement("a");
+    placesLink.textContent = "View the Site";
+    placesLink.href = "#";
+
     //? Tilføjelse af elementer til HTML:
-    placesDiv.append(placesImg, placesName, placesCity);
-    // places div tilføjes til sitesElm:
+    placesDiv.append(placesImg, placesName, placesCity, placesLink);
+    // places div tilføjes til sitesPlaces:
     sitesPlaces.appendChild(placesDiv);  
   });
 
   //? Tilføjelse af elementer til HTML:
-  sitesDiv.append(sitesHeadline, sitesText, sitesBtn, sitesPlaces);
+  
   // elementer tilføjes til "button" (som er et link):
   sitesBtn.append(sitesBtnicon, "Start");
+  // info tilføjes description:
+  sitesDescription.append(sitesHeadline, sitesText, sitesBtn);
+  // de to div'er tilføjes til den store div
+  sitesDiv.append(sitesDescription, sitesPlaces);
   // sites div tilføjes til sitesElm:
   sitesElm.appendChild(sitesDiv);
 
