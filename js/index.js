@@ -224,6 +224,28 @@ document.addEventListener("DOMContentLoaded", function () {
     advantagesElm.appendChild(advantagesDiv);
   });
 
+
+
+  //! FOOTER 
+  let footerElm = document.querySelector(".footer");
+
+  footer.forEach(footers => {
+    const footerDivs = document.createElement("div");
+    
+    footers.top.forEach(tops => {
+
+    })
+
+
+
+    //? Tilføjelse af elementer til HTML:
+    // footer divs tilføjes til footerElm:
+    footerElm.appendChild(footerTop, footerBottom);
+  });
+
+
+
+
   // eksempel på at udskrive alle overskrifter i services i konsollen:
   // services.forEach(service => console.log(service.headline))
 }); // ends DOMContentLoaded
