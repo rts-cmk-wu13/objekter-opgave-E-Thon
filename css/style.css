@@ -1,11 +1,22 @@
 /* COMMON STUFF: */
-.services, 
-.facilities__options {
+.services,
+.facilities__options,
+.sites div {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    column-gap: 2.56rem;
+}
+section:not(.hero):not(.hero__container) {
+    margin: 0 auto;
     max-width: 77.5rem;
     width: 100%;
-    margin: 0 auto;
-    display: flex;
-    gap: 2.56rem;
+}
+.services div,
+.facilities div,
+.sites div {
+    grid-row: 1 / 2;
 }
 
 /* ------------- HERO ------------------- */
@@ -24,10 +35,6 @@
     box-shadow: 0 4px 100px 0 rgba(0, 0, 0, 0.10);
 }
 
-.hero__container p {
-    padding: 1.5rem 0;
-}
-
 .hero__container .button {
     background-color: #F78065;
     width: 15.625rem;
@@ -37,12 +44,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.hero__container .icon {
-    color: #FFFFFF;
-    width: 1.4rem;
-    margin-right: .5rem;
 }
 
 /* ------------- SERVICES --------------- */
@@ -60,45 +61,42 @@
 }
 
 .services p {
-    margin: 1.5rem 0;
     color: rgba(0, 0, 0, 0.5);
 }
 
 .services a {
-    color:#F78065;
+    color: #F78065;
     font-size: 1.125rem;
 }
 
 /* ------------- FACILITIES  ------------ */
 .facilities {
-    background-color: rgb(2, 102, 11);
-    padding: 1.4375rem 0 ;
-}
-
-.facilities h2 {
-    background-color: rgb(163, 255, 194);
-}
-
-.facilities__options {
-    background-color: rgb(3, 250, 65);
+    padding: 1.4375rem 0;
 }
 
 .facilities__options div {
-    background-color: rgb(127, 201, 145);
+    padding: 5rem 0;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    height: auto;
 }
 
+
 .facilities__options .icon {
-    background-color: rgb(212, 231, 217);
+    width: 2rem;
 }
 
 .facilities__options h4 {
-    background-color: rgb(29, 61, 37);
+    margin: 0;
 }
 
 .facilities__options p {
     font-size: 0.875rem;
 }
 
+.facilities__options a {
+    color: #F78065;
+}
 
 
 /* ------------- SITES ------------------ */
@@ -117,10 +115,7 @@
 
 .sites p {
     background-color: rgb(245, 247, 164);
-}
 
-.sites .icon {
-    background-color: rgb(236, 226, 78);
 }
 
 .sites__places {
@@ -141,12 +136,13 @@
 
 .sites__places p {
     background-color: rgb(250, 211, 211);
+
 }
 
 
 /* ------------- ADVANTAGES ------------- */
 .advantages {
-   background-color: purple;
+    background-color: purple;
 }
 
 .advantages div {

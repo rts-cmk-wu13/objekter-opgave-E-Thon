@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // link tekst:
     const servicesLinktext = document.createElement("a");
     servicesLinktext.textContent = service.linktext;
+    servicesLinktext.href = "#";
 
     //? Tilføjelse af elementer til HTML:
     servicesDiv.append(
@@ -108,6 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Link
     const optionLink = document.createElement("a");
     optionLink.textContent = option.link;
+    optionLink.href = "#";
 
     //? Tilføjelse af elementer:
     // Tilføj elementer til optionDiv
@@ -132,7 +134,11 @@ document.addEventListener("DOMContentLoaded", function () {
   sitesHeadline.textContent = sites.headline;
   // text:
   const sitesText = document.createElement("p");
-  sitesText.textContent = sites.text;
+  sitesText.textContent = sites.text;  
+  // Button:
+  const sitesBtn = document.createElement("a");
+  sitesBtn.classList.add("button");
+  sitesBtn.href = "#";
   // btnicon:
   const sitesBtnicon = document.createElement("img");
   sitesBtnicon.src = sites.btnicon;
@@ -159,11 +165,13 @@ document.addEventListener("DOMContentLoaded", function () {
     //? Tilføjelse af elementer til HTML:
     placesDiv.append(placesImg, placesName, placesCity);
     // places div tilføjes til sitesElm:
-    sitesPlaces.appendChild(placesDiv);
+    sitesPlaces.appendChild(placesDiv);  
   });
 
   //? Tilføjelse af elementer til HTML:
-  sitesDiv.append(sitesHeadline, sitesText, sitesBtnicon, sitesPlaces);
+  sitesDiv.append(sitesHeadline, sitesText, sitesBtn, sitesPlaces);
+  // elementer tilføjes til "button" (som er et link):
+  sitesBtn.append(sitesBtnicon, "Start");
   // sites div tilføjes til sitesElm:
   sitesElm.appendChild(sitesDiv);
 
