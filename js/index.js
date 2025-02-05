@@ -105,8 +105,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const optionText = document.createElement("p");
     optionText.textContent = option.text;
 
+    // Link
+    const optionLink = document.createElement("a");
+    optionLink.textContent = option.link;
+
+    //? Tilføjelse af elementer:
     // Tilføj elementer til optionDiv
-    optionDiv.append(optionIcon, optionHeadline, optionText);
+    optionDiv.append(optionIcon, optionHeadline, optionText, optionLink);
 
     // Tilføj optionDiv til facilitiesOptions:
     facilitiesOptions.appendChild(optionDiv);

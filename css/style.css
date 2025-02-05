@@ -1,11 +1,11 @@
-/* WIDTHS: */
+/* COMMON STUFF: */
 .services, 
-.facilities,
-.sites,
-.advantages {
+.facilities__options {
     max-width: 77.5rem;
     width: 100%;
     margin: 0 auto;
+    display: flex;
+    gap: 2.56rem;
 }
 
 /* ------------- HERO ------------------- */
@@ -16,11 +16,11 @@
 
 .hero__container {
     position: absolute;
-    width: 51.4583%;
-    top: 16rem;
+    width: 46.3125rem;
+    top: 24rem;
     left: 3.9375rem;
     background-color: #FFFFFF;
-    padding: 6rem 9.75rem 6rem 4rem;
+    padding: 6rem 9.75rem 4.6875rem 4rem;
     box-shadow: 0 4px 100px 0 rgba(0, 0, 0, 0.10);
 }
 
@@ -47,32 +47,32 @@
 
 /* ------------- SERVICES --------------- */
 .services {
-    background-color: pink;
-}
-
-.services div {
-    background-color: rgb(177, 115, 125);
+    padding: 21rem 0 15rem;
 }
 
 .services img {
-    background-color: rgb(207, 49, 75);
+    height: 11.25rem;
+    width: auto;
 }
 
 .services h3 {
-    background-color: rgb(78, 39, 46);
+    margin-top: 5.25rem;
 }
 
 .services p {
-    background-color: rgb(236, 77, 103);
+    margin: 1.5rem 0;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .services a {
-    background-color: rgb(196, 88, 142);
+    color:#F78065;
+    font-size: 1.125rem;
 }
 
 /* ------------- FACILITIES  ------------ */
 .facilities {
     background-color: rgb(2, 102, 11);
+    padding: 1.4375rem 0 ;
 }
 
 .facilities h2 {
@@ -96,7 +96,7 @@
 }
 
 .facilities__options p {
-    background-color: rgb(6, 32, 12);
+    font-size: 0.875rem;
 }
 
 
@@ -104,6 +104,7 @@
 /* ------------- SITES ------------------ */
 .sites {
     background-color: rgb(231, 217, 15);
+    padding: 14.5rem 0;
 }
 
 .sites div {
