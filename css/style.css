@@ -149,6 +149,10 @@ font-size: 0.875rem;
     background-color: rgb(26, 8, 26);
 }
 
+.advantages h2 {
+    background-color: aliceblue;
+}
+
 .advantages .icon {
     background-color: rgb(114, 56, 114);
 }

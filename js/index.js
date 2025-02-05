@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //? Enkeltstående kodelinjer kombineret med arrays til oprettelse af elementer (samme koncept som ved facilites)
   const sitesDiv = document.createElement("div");
 
-  //sitesDescription: 
+  //sitesDescription:
   const sitesDescription = document.createElement("section");
   sitesDescription.classList.add("sites__description");
   // headline:
@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
   sitesHeadline.textContent = sites.headline;
   // text:
   const sitesText = document.createElement("p");
-  sitesText.textContent = sites.text;  
+  sitesText.textContent = sites.text;
   // Button:
   const sitesBtn = document.createElement("a");
   sitesBtn.classList.add("button");
@@ -174,11 +174,11 @@ document.addEventListener("DOMContentLoaded", function () {
     //? Tilføjelse af elementer til HTML:
     placesDiv.append(placesImg, placesName, placesCity, placesLink);
     // places div tilføjes til sitesPlaces:
-    sitesPlaces.appendChild(placesDiv);  
+    sitesPlaces.appendChild(placesDiv);
   });
 
   //? Tilføjelse af elementer til HTML:
-  
+
   // elementer tilføjes til "button" (som er et link):
   sitesBtn.append(sitesBtnicon, "Start");
   // info tilføjes description:
@@ -189,10 +189,15 @@ document.addEventListener("DOMContentLoaded", function () {
   sitesElm.appendChild(sitesDiv);
 
   //! ADVANTAGES
-  //? Advantages er et array, og derfor bruges forEach:
+  //? Advantages er et array, og derfor bruges forEach på den ene del:
   let advantagesElm = document.querySelector(".advantages");
-
-  advantages.forEach((advantage) => {
+  
+  // header:
+  const advantagesHeader = document.createElement("h2");
+  advantagesHeader.textContent = advantages.header;
+  advantagesElm.append(advantagesHeader);
+  
+  advantages.advantagesSub.forEach((advantage) => {
     // div til services indhold:
     const advantagesDiv = document.createElement("div");
 
@@ -210,7 +215,11 @@ document.addEventListener("DOMContentLoaded", function () {
     advantagesText.textContent = advantage.text;
 
     //? Tilføjelse af elementer til HTML:
-    advantagesDiv.append(advantagesIcon, advantagesHeadline, advantagesText);
+    advantagesDiv.append(
+      advantagesIcon,
+      advantagesHeadline,
+      advantagesText
+    );
     // advantages div tilføjes til advantagesElm:
     advantagesElm.appendChild(advantagesDiv);
   });
