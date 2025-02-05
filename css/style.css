@@ -1,0 +1,178 @@
+/* COMMON STUFF: */
+.services,
+.facilities__options,
+.sites__places,
+.advantages {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14.375rem, 1fr));
+    grid-template-rows: auto;
+    column-gap: 2.56rem;
+}
+
+section:not(.hero):not(.hero__container):not(.sites__description) {
+    margin: 0 auto;
+    max-width: 77.5rem;
+    width: 100%;
+}
+
+.services div,
+.facilities div,
+.sites__places div {
+    grid-row: 1 / 2;
+}
+
+/* ------------- HERO ------------------- */
+.hero {
+    width: 100%;
+    position: relative;
+}
+
+.hero__container {
+    position: absolute;
+    width: 46.3125rem;
+    top: 24rem;
+    left: 3.9375rem;
+    background-color: #FFFFFF;
+    padding: 6rem 9.75rem 4.6875rem 4rem;
+    box-shadow: 0 4px 100px 0 rgba(0, 0, 0, 0.10);
+}
+
+.hero__container .button {
+    background-color: #F78065;
+    width: 15.625rem;
+    height: 4.0625rem;
+    font-size: 1.25rem;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------- SERVICES --------------- */
+.services {
+    padding: 21rem 0 15rem;
+}
+
+.services img {
+    height: 11.25rem;
+    width: auto;
+}
+
+.services h3 {
+    margin-top: 5.25rem;
+}
+
+.services p {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.services a {
+    color: #F78065;
+    font-size: 1.125rem;
+}
+
+/* ------------- FACILITIES  ------------ */
+.facilities {
+    padding: 1.4375rem 0;
+}
+
+.facilities__options div {
+    padding: 5rem 0;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    height: auto;
+}
+
+
+.facilities__options .icon {
+    width: 2rem;
+}
+
+.facilities__options h4 {
+    margin: 0;
+}
+
+.facilities__options p {
+    font-size: 0.875rem;
+}
+
+.facilities__options a {
+    color: #F78065;
+}
+
+
+/* ------------- SITES ------------------ */
+.sites {
+    padding: 14.5rem 0;
+}
+
+.sites>div {
+    display: flex;
+    gap: 7.9375rem;
+}
+
+.sites__description {
+    max-width: 20.3125rem;
+}
+
+.sites__description p {
+    font-size: 1.125rem;
+}
+
+.sites__description a {
+    margin-top: 3.5rem;
+}
+
+.sites__places img {
+    height: 26.125rem;
+}
+
+.sites__places h3 {
+    padding-top: 1.5rem;
+}
+
+.sites__places p {
+    color: #3F3D56;
+    font-size: 0.875rem;
+}
+
+.sites__places a {
+    color: #F78065;
+    font-size: 1.125rem;
+    font-weight: normal;
+}
+
+
+/* ------------- ADVANTAGES ------------- */
+.advantages {
+    margin: 0 auto;
+}
+
+.advantages div {
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    row-gap: 2rem;
+}
+
+.advantages h2 {
+    grid-area: 1 / 1 / 2 / 4;
+    padding-bottom: 10rem;
+}
+
+.advantages .icon {
+    width: 2rem;
+}
+
+.advantages p {
+    font-size: 0.875rem;
+}
+
+
+
+/* ------------- FOOTER ----------------- */
+.footer {
+    background-color: blue;
+
+}
