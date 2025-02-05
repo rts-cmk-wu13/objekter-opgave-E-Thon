@@ -8,19 +8,35 @@ document.addEventListener("DOMContentLoaded", function () {
   // Billede:
   const heroImg = document.createElement("img");
   heroImg.src = hero.image;
+
+  // hero container:
+  const heroContainer = document.createElement("section");
+  heroContainer.classList.add("hero__container");
   // Overskrift:
   const heroHeadline = document.createElement("h1");
   heroHeadline.textContent = hero.headline;
   // Copy tekst (beskrivelse):
   const heroCopy = document.createElement("p");
   heroCopy.textContent = hero.copy;
-  // Ikon:
+
+  // Button:
+  const heroBtn = document.createElement("a");
+  heroBtn.classList.add("button");
   const heroIcon = document.createElement("img");
+  heroBtn.href = "#";
   heroIcon.src = hero.icon;
   heroIcon.classList.add("icon");
 
   //? Tilføjelse af elementer til HTML:
-  heroDiv.append(heroImg, heroHeadline, heroCopy, heroIcon);
+  // container og img tilføjes hero div:
+  heroDiv.append(heroContainer, heroImg);
+
+  // elementer til hero container tilføjes:
+  heroContainer.append(heroHeadline, heroCopy, heroBtn);
+
+  // elementer tilføjes til "button" (som er et link):
+  heroBtn.append(heroIcon, "Explore");
+
   // hero div tilføjes til heroElm (stedet der er lavet til hero i HTML)
   heroElm.appendChild(heroDiv);
 
@@ -80,7 +96,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const optionIcon = document.createElement("img");
     optionIcon.src = option.icon;
     optionIcon.classList.add("icon");
-
 
     // Overskrift
     const optionHeadline = document.createElement("h4");
